@@ -1,0 +1,22 @@
+﻿<Window x:Class="Sparen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sparen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Weekgeld" HorizontalAlignment="Left" Margin="128,96,0,0" VerticalAlignment="Top" Width="131" IsEnabled="False"/>
+        <Label Content="Wekelijkse verhoging" HorizontalAlignment="Left" Margin="128,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.1,0.572" Width="131" IsEnabled="False"/>
+        <Label Content="Gewenst spaarbedrag" HorizontalAlignment="Left" Margin="128,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,-1.897" Width="131" IsEnabled="False"/>
+        <TextBox x:Name="pocketTextBox" HorizontalAlignment="Left" Margin="292,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="weeklyRaiseTextBox" HorizontalAlignment="Left" Margin="292,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="desiredSavingsTextBox" HorizontalAlignment="Left" Margin="292,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="resultTextBox" HorizontalAlignment="Left" Margin="134,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="540" Height="173" VerticalScrollBarVisibility="Auto"/>
+        <Button x:Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="576,103,0,0" VerticalAlignment="Top" Width="76" Click="calculateButton_Click"/>
+        <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="576,127,0,0" VerticalAlignment="Top" Width="76" Click="clearButton_Click"/>
+        <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="576,152,0,0" VerticalAlignment="Top" Width="76" Click="closeButton_Click"/>
+
+    </Grid>
+</Window>
