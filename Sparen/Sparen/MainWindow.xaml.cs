@@ -47,17 +47,19 @@ namespace Sparen
             int weekCounter = 0;
             decimal savedDecmicals = 0;
             decimal savedWeekGeld = 0;
+            decimal extra = 0;
             while (savedDecmicals < gewenstBedrag)
             {
                 savedDecmicals += weekGeld;
                 savedDecmicals += verhoging;
                 savedWeekGeld += weekGeld;
+                extra += verhoging;
                // total += savedDecmicals += extra;
                 weekCounter++;
 
             }
             berekening.AppendLine($"Spaarbedrag na {weekCounter} weken:€{Math.Round(savedWeekGeld,2)}\n");
-            berekening.AppendLine($"Extra weekgeld op dat moment:€{Math.Round(savedDecmicals - savedWeekGeld,2)}\n");
+            berekening.AppendLine($"Extra weekgeld op dat moment:€{Math.Round(extra,2)}\n");
             berekening.AppendLine($"Totaal spaargeld:€{Math.Round(savedDecmicals,2)}\n");
             resultTextBox.Text = berekening.ToString();
         }
