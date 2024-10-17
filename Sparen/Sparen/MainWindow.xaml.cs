@@ -39,23 +39,26 @@ namespace Sparen
         private void calculateButton_Click(object sender, RoutedEventArgs e)
         {
             //input
-            double weekGeld = double.Parse(pocketTextBox.Text);
-            double verhoging = double.Parse(weeklyRaiseTextBox.Text);
-            double gewenstBedrag = double.Parse(desiredSavingsTextBox.Text);
+            decimal weekGeld = decimal.Parse(pocketTextBox.Text);
+            decimal verhoging = decimal.Parse(weeklyRaiseTextBox.Text);
+            decimal gewenstBedrag = decimal.Parse(desiredSavingsTextBox.Text);
             StringBuilder berekening = new StringBuilder();
             //berekening
-            int i = 0;
-            double input = 0;
-            while (input < gewenstBedrag)
+            int weekCounter = 0;
+            decimal savedDecmicals = 0;
+            decimal savedWeekGeld = 0;
+            while (savedDecmicals < gewenstBedrag)
             {
-                input += weekGeld;
-                weekGeld += verhoging;
-                i++;
+                savedDecmicals += weekGeld;
+                savedDecmicals += verhoging;
+                savedWeekGeld += weekGeld;
+               // total += savedDecmicals += extra;
+                weekCounter++;
 
             }
-            berekening.AppendLine($"Spaarbedrag na {i} weken:€{Math.Round(input - weekGeld,2)}\n");
-            berekening.AppendLine($"Extra weekgeld op dat moment:€{Math.Round(weekGeld,2)}\n");
-            berekening.AppendLine($"Totaal spaargeld:€{Math.Round(input,2)}\n");
+            berekening.AppendLine($"Spaarbedrag na {weekCounter} weken:€{Math.Round(savedWeekGeld,2)}\n");
+            berekening.AppendLine($"Extra weekgeld op dat moment:€{Math.Round(savedDecmicals - savedWeekGeld,2)}\n");
+            berekening.AppendLine($"Totaal spaargeld:€{Math.Round(savedDecmicals,2)}\n");
             resultTextBox.Text = berekening.ToString();
         }
     }

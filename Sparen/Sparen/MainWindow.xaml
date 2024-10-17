@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Sparen"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
         <Label Content="Weekgeld" HorizontalAlignment="Left" Margin="128,96,0,0" VerticalAlignment="Top" Width="131" IsEnabled="False"/>
         <Label Content="Wekelijkse verhoging" HorizontalAlignment="Left" Margin="128,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.1,0.572" Width="131" IsEnabled="False"/>
@@ -17,6 +18,8 @@
         <Button x:Name="calculateButton" Content="Berekenen" HorizontalAlignment="Left" Margin="576,103,0,0" VerticalAlignment="Top" Width="76" Click="calculateButton_Click"/>
         <Button x:Name="clearButton" Content="Wissen" HorizontalAlignment="Left" Margin="576,127,0,0" VerticalAlignment="Top" Width="76" Click="clearButton_Click"/>
         <Button x:Name="closeButton" Content="Afsluiten" HorizontalAlignment="Left" Margin="576,152,0,0" VerticalAlignment="Top" Width="76" Click="closeButton_Click"/>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="/Spaarvarken.jpg"/>
+        </Grid.Background>
     </Grid>
 </Window>
